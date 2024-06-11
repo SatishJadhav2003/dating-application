@@ -1,0 +1,19 @@
+<div class="relative h-screen w-full">
+  <img
+    src="../../../assets/Images/kiss-her-on-the-first-date.jpg"
+    alt="Dating Image"
+    class="absolute h-full w-full object-fill"
+  />
+  <div class="absolute inset-0 flex flex-wrap items-center justify-center bg-black bg-opacity-50">
+    <h1 class="text-4xl md:text-6xl lg:text-8xl text-white font-bold text-center p-4 w-full">
+      Best Dating Experience,
+      <br />
+      <span id="word">{{ currentWord }}</span>
+    </h1>
+  </div>
+</div>
+<div class="container mx-auto px-4 py-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <app-card *ngFor="let profile of profiles" [profile]="profile"></app-card>
+  </div>
+</div>

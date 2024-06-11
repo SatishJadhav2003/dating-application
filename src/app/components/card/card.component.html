@@ -1,0 +1,18 @@
+<div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+  <img [src]="'assets/Images/' + profile.imageUrl" [alt]="profile.name" class="w-full h-96 object-contain hover:cursor-pointer">
+  <div class="p-4">
+    <h3 class="text-lg font-semibold">{{ profile.name }}</h3>
+    <p class="text-gray-500">{{ profile.occupation }}</p>
+    <div class="mt-4 flex items-center justify-between">
+      <span class="text-xl font-bold text-gray-900">{{ profile.age }}</span>
+      <span class="line-through text-gray-400">{{ profile.price }}</span>
+      <button 
+      (click)="toggleFavorite()" 
+      class="focus:outline-none flex items-center justify-center w-10 h-10"
+    >
+      <i [ngClass]="{'fas  text-red-500': isFavorite, 'far text-red-500': !isFavorite}" 
+         class="fa-heart heart-icon text-3xl"></i>
+    </button>
+    </div>
+  </div>
+</div>
